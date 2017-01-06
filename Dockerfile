@@ -1,4 +1,4 @@
-FROM centos:7.1
+FROM centos:centos7
 
 
 # update source from yum
