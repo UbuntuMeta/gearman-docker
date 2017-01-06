@@ -2,7 +2,7 @@ FROM centos:centos7
 
 
 # update source from yum
-RUN yum -y update
+RUN yum -y update || exit 1;
 
 RUN yum install -y uuid-devel libuuid libuuid-devel uuid \
 boost-devel libevent libevent-devel boost boost-devel \
