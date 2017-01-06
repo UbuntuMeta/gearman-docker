@@ -2,9 +2,9 @@ FROM centos:centos7
 
 
 # update source from yum
-RUN yum update
+RUN yum -y update
 
-RUN yum install uuid-devel libuuid libuuid-devel uuid \
+RUN yum install -y uuid-devel libuuid libuuid-devel uuid \
 boost-devel libevent libevent-devel boost boost-devel \
 gcc-c++ mysql-libs mysql libmemcached-devel libmemcached \
 make curl libcurl-devel mysql-devel gperf
