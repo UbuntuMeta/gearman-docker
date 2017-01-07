@@ -13,7 +13,9 @@ RUN cd /usr/local/src
 ENV GEARMAN_VERSION 1.1.14
 # isntall gearmand
 RUN wget https://github.com/gearman/gearmand/releases/download/$GEARMAN_VERSION/gearmand-$GEARMAN_VERSION.tar.gz
-RUN tar zxvf gearmand-$GEARMAN_VERSION.tar.gz && cd gearmand-$GEARMAN_VERSION && ./configure && make && make install
+RUN tar zxvf gearmand-$GEARMAN_VERSION.tar.gz && \
+cd gearmand-$GEARMAN_VERSION && ./configure && make && make install && \
+cp bin/gearmand /usr/local/bin/gearmand
 
 CMD ['gearmand -d']
 
